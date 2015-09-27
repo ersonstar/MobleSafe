@@ -30,7 +30,7 @@
         android:layout_toRightOf="@id/iv_appicon"
         android:layout_marginLeft="15dp"
         android:text="缓存"
-        android:textColor="@color/black1" />
+        android:textColor="@color/white" />
 
     
 </RelativeLayout>

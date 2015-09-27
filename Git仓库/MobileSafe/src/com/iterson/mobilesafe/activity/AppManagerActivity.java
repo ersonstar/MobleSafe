@@ -276,9 +276,7 @@ public class AppManagerActivity extends Activity implements OnClickListener {
 				} else {
 					holder.tvLocation.setText("SD卡中");
 				}
-
 			}
-
 				break;
 			}
 
