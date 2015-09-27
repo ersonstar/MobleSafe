@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        style="@style/TitleStyle"
+        android:text="进程管理" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="5dp" >
+
+        <TextView
+            android:id="@+id/tv_running_process"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="运行中的进程" />
+
+        <TextView
+            android:id="@+id/tv_meomory_avail"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:text="剩余/总内存" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+         >
+
+        <ListView
+            android:id="@+id/lv_prcess"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+        </ListView>
+
+        <LinearLayout
+            android:id="@+id/ll_loading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <ProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="正在加载请稍后" />
+        </LinearLayout>
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+        
+        <Button 
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="全选"
+            android:layout_weight="1"
+            android:background="@drawable/btn_green_normal"
+            android:onClick="selectAll"
+            />
+        <Button 
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="反选"
+            android:layout_weight="1"
+            android:background="@drawable/btn_green_normal"
+            android:onClick="selectInvenrt"
+            />
+        <Button 
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="一键清理"
+            android:layout_weight="1"
+            android:textSize="16sp"
+            android:background="@drawable/btn_green_normal"
+            android:onClick="clear"
+            />
+        <Button 
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_green_normal"
+            android:text="设置"
+            android:layout_weight="1"
+            android:onClick="setting"
+            />
+        
+    </LinearLayout>
+
+</LinearLayout>

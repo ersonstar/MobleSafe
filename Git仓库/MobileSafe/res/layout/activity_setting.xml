@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:iterson="http://schemas.android.com/apk/res/com.iterson.mobilesafe"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        style="@style/TitleStyle"
+        android:text="设置中心" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <com.iterson.mobilesafe.view.SettingItemView
+                android:id="@+id/siv_update"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                iterson:desc_off="自动更新已关闭"
+                iterson:desc_on="自动更新已开启"
+                iterson:title="自动更新设置" />
+
+            <com.iterson.mobilesafe.view.SettingItemView
+                android:id="@+id/siv_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                iterson:desc_off="来电电话归属已关闭"
+                iterson:desc_on="来电电话归属已开启"
+                iterson:title="来电电话归属地显示" />
+
+            <com.iterson.mobilesafe.view.SettingClickView
+                android:id="@+id/scv_address_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <com.iterson.mobilesafe.view.SettingClickView
+                android:id="@+id/scv_addres_position"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <com.iterson.mobilesafe.view.SettingItemView
+                android:id="@+id/siv_black_number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                iterson:desc_off="黑名单拦截已关闭"
+                iterson:desc_on="黑名单拦截已开启"
+                iterson:title="黑名单拦截设置" />
+
+            <com.iterson.mobilesafe.view.SettingItemView
+                android:id="@+id/siv_app_lock"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                iterson:desc_off="程序锁已关闭"
+                iterson:desc_on="程序锁已开启"
+                iterson:title="程序锁设置" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
