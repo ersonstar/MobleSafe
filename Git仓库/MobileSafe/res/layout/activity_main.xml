@@ -2,7 +2,9 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical" >
+    android:orientation="vertical"
+    android:background="@drawable/shield_1"
+     >
 
     <TextView
         style="@style/TitleStyle"
@@ -11,12 +13,12 @@
     <com.iterson.mobilesafe.view.FocusedTextView 
          android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="快说，人家是不是你的小公举！快说，人家是不是你的小公举！"
+        android:text="你的私人手机管家，让你更安全                                                  "
+        android:textColor="@color/black1"
         android:singleLine="true"
         android:ellipsize="marquee"
         android:layout_marginTop="10dp"
         android:textSize="18sp"
-        android:textColor="#000"
         
         />
 

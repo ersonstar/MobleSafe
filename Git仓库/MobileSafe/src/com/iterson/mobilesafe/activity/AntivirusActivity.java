@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
+import android.R.anim;
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -18,9 +19,11 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
+import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.LinearInterpolator;
 import android.view.animation.RotateAnimation;
+import android.view.animation.TranslateAnimation;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
@@ -84,6 +87,7 @@ public class AntivirusActivity extends Activity {
 
 		};
 	};
+	private ImageView ivLine;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -94,6 +98,7 @@ public class AntivirusActivity extends Activity {
 		tvStatus = (TextView) findViewById(R.id.tv_status);
 		pbBar = (ProgressBar) findViewById(R.id.pb_progressBar);
 		llScanning = (LinearLayout) findViewById(R.id.ll_scanning);
+		
 		// 设置扫描雷达动画
 		RotateAnimation anim = new RotateAnimation(0, 360,
 				Animation.RELATIVE_TO_SELF, 0.5f, Animation.RELATIVE_TO_SELF,

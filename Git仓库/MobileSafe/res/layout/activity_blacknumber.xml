@@ -2,12 +2,14 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical" >
+    android:orientation="vertical"
+	android:background="@drawable/blacknumber_1"
+     >
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/green1"
+        android:background="@color/black"
         android:orientation="horizontal" >
 
         <TextView
@@ -18,10 +20,11 @@
             android:layout_weight="5"
             android:singleLine="true"
             android:text="黑名单管理"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             android:textSize="30sp" />
 
         <Button
+            android:background="@color/black1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="2"

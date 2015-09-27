@@ -3,11 +3,16 @@
     xmlns:iterson="http://schemas.android.com/apk/res/com.iterson.mobilesafe"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical" >
+    android:orientation="vertical"
+    android:background="@drawable/setting_1"
+     >
 
     <TextView
         style="@style/TitleStyle"
-        android:text="设置中心" />
+        android:text="设置中心" 
+        android:background="@drawable/title"
+        android:textColor="@color/white"
+        />
 
     <ScrollView
         android:layout_width="match_parent"

@@ -46,15 +46,15 @@ public class ClearCacheActivity extends Activity {
 	private List<ApplicationInfo> mAppList;
 	private LinearLayout llCacheList;
 	private Handler mHandler = new Handler() {
+		private LinearLayout llCacheBg;
+
 		public void handleMessage(android.os.Message msg) {
-			
 			
 			switch (msg.what) {
 			case SCANNING:
 				String name =  (String) msg.obj;
 				tvDesc.setText("正在扫描:"+name);
 				break;
-				
 			case SCANNING_CACHE:
 				final CacheInfo info = (CacheInfo) msg.obj;
 				View view = View.inflate(getApplicationContext(), R.layout.list_cache_item, null);
@@ -62,13 +62,13 @@ public class ClearCacheActivity extends Activity {
 				ImageView ivDelete = (ImageView) view.findViewById(R.id.iv_delete);
 				TextView tvTitle = (TextView) view.findViewById(R.id.tv_cache_name);
 				TextView tvCacheSize = (TextView) view.findViewById(R.id.tv_cache_size);
+				llCacheBg = (LinearLayout) findViewById(R.id.ll_cache_bg);
 				ivIcon.setImageDrawable(info.icon);
 				tvTitle.setText(info.name);
 				tvCacheSize.setText("缓存大小："+info.cacheSize);
 				llCacheList.addView(view, 0);
 				
 				//单个清理
-				
 				ivDelete.setOnClickListener(new OnClickListener() {
 				//如果想在应用中清理其他应用的缓存，必须自己是系统应用
 					//达不到系统应用，就跳转到这个应用的相信，让用户自己清理
@@ -83,8 +83,10 @@ public class ClearCacheActivity extends Activity {
 					}
 				});
 				break;
-			case SCANNING_FINISH:
+				case SCANNING_FINISH:
 				tvDesc.setText("扫描完成");
+				llCacheList.setBackgroundResource(R.drawable.rubish_1_green);
+				
 				break;
 			
 			default:
@@ -101,8 +103,9 @@ public class ClearCacheActivity extends Activity {
 		setContentView(R.layout.activity_clear_cache);
 		tvDesc = (TextView) findViewById(R.id.tv_describe);
 		pbClear = (ProgressBar) findViewById(R.id.pb_clear_progress);
-		llCacheList = (LinearLayout) findViewById(R.id.ll_cache_list);
-
+		llCacheList = (LinearLayout) findViewById(R.id.ll_cache_bg);
+		
+		
 		mPM = getPackageManager();
 		
 		new Thread() {

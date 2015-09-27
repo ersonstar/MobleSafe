@@ -2,7 +2,9 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical" >
+    android:orientation="vertical" 
+    android:background="@drawable/appmanager_1"
+    >
 
     <TextView
         style="@style/TitleStyle"
@@ -65,7 +67,7 @@
             android:layout_height="wrap_content"
             android:background="@color/black1"
             android:padding="5dp"
-            android:text="yingyon"
+            android:text="用户应用:0"
             android:textColor="@color/white"
             android:textSize="18sp" />
     </FrameLayout>

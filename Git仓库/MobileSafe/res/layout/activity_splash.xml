@@ -2,16 +2,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-  	android:background="@drawable/launcher_bg"
+  	android:background="@drawable/robot_shield_1"
   	android:id="@+id/rl_root"
-    tools:context="com.iterson.mobilesafe.activity.SplashActivity" >
+    tools:context="com.iterson.mobilesafe.activity.SplashActivity"
+    android:padding="10dp" >
 
     <TextView
         android:id="@+id/tv_version"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
         android:text="版本名:1.0" 
         android:textColor="#000"
         android:textSize="16sp"
@@ -24,10 +23,9 @@
     <ProgressBar 
          android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/tv_version"
         android:layout_marginTop="5dp"
         android:layout_centerHorizontal="true"
-		android:id="@+id/pb_progress"       
+        android:layout_centerVertical="true"
         />
 
     <TextView
