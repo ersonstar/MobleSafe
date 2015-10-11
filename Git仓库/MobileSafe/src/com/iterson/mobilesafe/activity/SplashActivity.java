@@ -145,7 +145,7 @@ public class SplashActivity extends Activity {
 				long startTime = System.currentTimeMillis();// 得到当前时间
 				try {
 
-					URL url = new URL("http://192.168.191.1:8080/update.json");
+					URL url = new URL("http://121.42.203.145/update.json");
 					conn = (HttpURLConnection) url.openConnection();
 					conn.setRequestMethod("GET");// 设置请求方法
 					conn.setConnectTimeout(2000);// 连接超时
@@ -167,9 +167,8 @@ public class SplashActivity extends Activity {
 
 							// 判断有没有版本更新
 							if (mVersionCode > getVersionCode()) {// 有更新
-								// TODO 弹出升级对话框
+								// 弹出升级对话框
 								msg.what = CODE_UPDATE_DIALOG;
-
 							} else {
 								// 跳转主页面
 								msg.what = CODE_ENTER_HOME;
@@ -329,9 +328,7 @@ public class SplashActivity extends Activity {
 				@Override
 				public void onLoading(long total, long current,
 						boolean isUploading) {
-					// TODO Auto-generated method stub
 					super.onLoading(total, current, isUploading);
-
 					int percent = (int) (current * 100 / total);
 					System.out.println("下载进度" + percent + "%");
 					tvProgress.setText("下载进度：" + percent + "%");
@@ -343,7 +340,6 @@ public class SplashActivity extends Activity {
 				 */
 				@Override
 				public void onSuccess(ResponseInfo<File> responseInfo) {
-					// TODO Auto-generated method stub
 					String filePath = responseInfo.result.getPath();
 					System.out.println("下载成功" + filePath);
 					// 安装APK
@@ -355,7 +351,6 @@ public class SplashActivity extends Activity {
 				 */
 				@Override
 				public void onFailure(HttpException error, String msg) {
-					// TODO Auto-generated method stub
 					error.printStackTrace();
 					Toast.makeText(getApplicationContext(), msg, 1).show();
 				}
